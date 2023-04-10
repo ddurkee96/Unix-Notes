@@ -14,6 +14,7 @@ Metacharacters are characters that can be used to represent other characters. Th
 | \s            | all "space" characters                                              |
 | $             | follows a character to match that character at the end of a line    |
 | ^             | precedes a character to match that character at the start of a line |
+| \n            | newline character                                                   |
 
 One can use the uppercase version (\W, \D, \S ) of the above to represent the \*\*inverse sets. The \W metacharacter would thus represent everything besides word characters.
 
@@ -26,6 +27,8 @@ Quantifiers are characters that specify the quantity of the preceding character 
 | +          | one or more of preceding expression                                                    |
 | \*         | zero or more of preceding expression                                                   |
 | {n}        | specify exact number (replace n with an integer) of occurances of preceding expression |
+| ?          | zero or one of preceding expression                                                    |
+| &#124;     | either the previous or the following expression                                        |
 
 ### Character sets
 
