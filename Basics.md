@@ -23,6 +23,28 @@ Below are some basic Unix commands and their descriptions.
 | rm filename             | Remove/delete files or directories. Use -r option for directories.                                                           |
 | rmdir Directoryname     | Remove/delete EMPTY directories.                                                                                             |
 
+### Searching: grep and awk
+
+The 'grep' command is used to print lines that contain a specified string of characters that can also contain regular expressions. It is a powerful command to quickly search through text files and parse data files.
+
+In my research, for example, I often run DFT-based molecular dynamics simulations in the software package called VASP (Vienna **ab **initio simulation package). One of the output files contains thermodynamic information including the pressure of the system at each trajectory in the simulation. To quickly obtain this information from the data file, I often use 'grep' in the following way:
+
+'grep 'total pressure' OUTCAR > pressures.csv'
+
+This command searches for lines, in a file named OUTCAR, which contain the string 'total pressure', and redirects the output to a file called 'pressures.csv'.
+
+The 'awk' command is used to re-format files into output. One can provide a pattern/keyword to the argument of awk and print the lines in a file that match the pattern. Awk is powerful because one can use arithmetic, if/else logic, for/while loops, etc. and also split lines by a delimiter to print specific columns in a file.
+
+awk options 'selection_criteria {action}' in > out
+
+Example: awk '{print}' file
+
+Prints file line-by-line.
+
+awk '/match/ {print}' file
+
+Print the lines with a pattern/keyword in place of match.
+
 ### Output redirection and appending
 
 | Symbol | Description                                                                                                                                                                                                                                                |
