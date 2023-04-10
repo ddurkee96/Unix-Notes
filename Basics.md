@@ -1,4 +1,8 @@
-## Commands
+# Unix Basics
+
+## Commands, Output, Command Customization, Makefile, and more
+
+### Commands
 
 Below are some basic Unix commands and their descriptions.
 
