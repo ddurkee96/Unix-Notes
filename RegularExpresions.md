@@ -31,6 +31,8 @@ Quantifiers are characters that specify the quantity of the preceding character 
 
 Character sets can be specified by square brackets, and character groups can be specified by parantheses. Brackets match any of the specified characters and charcter ranges contained inside, whereas character groups match exactly what is contained inside. See below for examples.
 
-| ( ) | create a capturing group. (a-z0-9) will capture occurances of 'a-z0-9' exactly, it does not capture the range |
-| [ ] | create a character set. [a-z0-9] will capture occurances of a character between a-z in the alphabet, OR a number between 0 and 9 |
-| ^ | matches the compliment of a set - [^aeiou] will match consonants instead of vowels |
+| Characters | Description                                                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| ( )        | create a capturing group. (a-z0-9) will capture occurances of 'a-z0-9' exactly, it does not capture the range                    |
+| [ ]        | create a character set. [a-z0-9] will capture occurances of a character between a-z in the alphabet, OR a number between 0 and 9 |
+| ^          | matches the compliment of a set - [^aeiou] will match consonants instead of vowels                                               |
