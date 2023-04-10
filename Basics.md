@@ -25,10 +25,3 @@ Below are some basic Unix commands and their descriptions.
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | >      | Output redirection. E.g 'cat file1.txt > file2.txt' redirects the output of 'cat file1.txt' into another file called 'file2.txt'. CAUTION: If output redirection is used on an existing file, the contents of the file will be replaced. See append below. |
 | >>     | Append the output of a command. E.g. 'cat file1.txt >> file2.txt' redirects the output of 'cat file1.txt' into 'file2.txt' while retaining the original contents of 'file2.txt'.                                                                           |
-
-'>' - Output redirection. E.g 'cat file1.txt > file2.txt' redirects the output of
-'cat file1.txt' into another file called 'file2.txt'. CAUTION: If output redirection is used on an
-existing file, the contents of the file will be replaced. See append below.
-
-'>>' - Append the output of a command. E.g. 'cat file1.txt >> file2.txt' redirects
-the output of 'cat file1.txt' into 'file2.txt' while retaining the original contents of 'file2.txt'.
