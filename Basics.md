@@ -22,6 +22,7 @@ Below are some basic Unix commands and their descriptions.
 | cat filename1 filename2 | Concatenate file2 to file1. If more than 2 files provided, concatenate to the first first in order of the arguments passed.  |
 | rm filename             | Remove/delete files or directories. Use -r option for directories.                                                           |
 | rmdir Directoryname     | Remove/delete EMPTY directories.                                                                                             |
+| sort filename           | Sorts the contents of the file line-by-line and prints the sorted contents to the console.                                   |
 
 ### Searching: grep and awk
 
@@ -54,7 +55,7 @@ Print the lines with a pattern/keyword in place of match.
 
 ### Customization using alias
 
-Use the \*alias command to create a shorter name for a command. To do this, one must make edits to the bash profile:
+Use the **alias** command to create a shorter name for a command. To do this, one must make edits to the bash profile:
 
 ```
 nano ~/.bash_profile
@@ -64,7 +65,7 @@ alias edbp='nano ~/.bash_profile'
 
 ```
 
-The above shows an example of opening the bash profile inside of the text editor *nano, and setting the shortcut command *edbp. The result is that instead of using the command 'nano ~/.bash_profile' to open up and edit the bash profile, one can simply use the shortcut 'edbp' directly on the command line.
+The above shows an example of opening the bash profile inside of the text editor **nano**, and setting the shortcut command **edbp**. The result is that instead of using the command 'nano ~/.bash_profile' to open up and edit the bash profile, one can simply use the shortcut **edbp** directly on the command line.
 
 Before one can use the shortcut, however, one must run the following command on the command line when new aliases are created:
 
@@ -94,4 +95,24 @@ readme.md:
 clean:
   rm README.md
 
+```
+
+### Differentiating different files
+
+Use the **diff** and **sdiff** commands to compare lines in two different files and return lines that are different.
+
+```
+diff file1.txt file2.txt  ! diff tells you which lines are different.
+
+sdiff file1.txt file2.txt ! sdiff gives a side-by-side comparison
+```
+
+### Hashes
+
+A hash is a string that is generated from the contents of a file. It acts a sort of 'mark of authenticity'. One can use **md5sum** and **sashum** to check the hash of a file.
+
+```
+sashum file1.txt
+----------------
+md5sum file1.txt
 ```
