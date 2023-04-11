@@ -60,18 +60,18 @@ The makefile is run using the command 'make' on the command line.
 
 General format in makefile:
 
-"""
+```
 [target]: [dependencies]
-[commands]
-"""
+  [commands]
+```
 
 Must have the tab underneath 'target' to start setting commands. Below is a simple example of a makefile that creates a README.md file, and also has a target called 'clean' which will remove the README file whenever the command 'make clean' is run.
 
-"""
+```
 readme.md:
-echo "Creating a README file" >> README.md
+  echo "Creating a README file" >> README.md
 
 clean:
-rm README.md
+  rm README.md
 
-"""
+```
