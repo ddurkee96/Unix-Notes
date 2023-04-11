@@ -52,6 +52,26 @@ Print the lines with a pattern/keyword in place of match.
 | >      | Output redirection. E.g 'cat file1.txt > file2.txt' redirects the output of 'cat file1.txt' into another file called 'file2.txt'. CAUTION: If output redirection is used on an existing file, the contents of the file will be replaced. See append below. |
 | >>     | Append the output of a command. E.g. 'cat file1.txt >> file2.txt' redirects the output of 'cat file1.txt' into 'file2.txt' while retaining the original contents of 'file2.txt'.                                                                           |
 
+### Customization using alias
+
+Use the \*alias command to create a shorter name for a command. To do this, one must make edits to the bash profile:
+
+```
+nano ~/.bash_profile
+
+--------------------
+alias edbp='nano ~/.bash_profile'
+
+```
+
+The above shows an example of opening the bash profile inside of the text editor *nano, and setting the shortcut command *edbp. The result is that instead of using the command 'nano ~/.bash_profile' to open up and edit the bash profile, one can simply use the shortcut 'edbp' directly on the command line.
+
+Before one can use the shortcut, however, one must run the following command on the command line when new aliases are created:
+
+```
+source ~/.bash_profile
+```
+
 ### Make and makefile
 
 Makefile is a file that "describes the relationship between different files and programs." It can be used to generate files or documents automatically, for example.
