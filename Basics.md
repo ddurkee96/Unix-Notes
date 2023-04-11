@@ -2,7 +2,7 @@
 
 ## Commands, Output, Command Customization, Makefile, and more
 
-### Commands
+### Basic Commands
 
 Below are some basic Unix commands and their descriptions.
 
@@ -51,3 +51,27 @@ Print the lines with a pattern/keyword in place of match.
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | >      | Output redirection. E.g 'cat file1.txt > file2.txt' redirects the output of 'cat file1.txt' into another file called 'file2.txt'. CAUTION: If output redirection is used on an existing file, the contents of the file will be replaced. See append below. |
 | >>     | Append the output of a command. E.g. 'cat file1.txt >> file2.txt' redirects the output of 'cat file1.txt' into 'file2.txt' while retaining the original contents of 'file2.txt'.                                                                           |
+
+### Make and makefile
+
+Makefile is a file that "describes the relationship between different files and programs." It can be used to generate files or documents automatically, for example.
+
+The makefile is run using the command 'make' on the command line.
+
+General format in makefile:
+
+"""
+[target]: [dependencies]
+[commands]
+"""
+
+Must have the tab underneath 'target' to start setting commands. Below is a simple example of a makefile that creates a README.md file, and also has a target called 'clean' which will remove the README file whenever the command 'make clean' is run.
+
+"""
+readme.md:
+echo "Creating a README file" >> README.md
+
+clean:
+rm README.md
+
+"""
