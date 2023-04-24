@@ -60,10 +60,29 @@ As before, space are not allowed when assigning values to variables using 'let'.
 
 ### Command substitution
 
-One can execute a command, and assign the output to a variable using '$(place commands here)
+One can execute a command, and assign the output to a variable using '$(place commands here)'
 
 ```
 math_lines=$(cat math.sh | wc -l)
 ```
 
 In the above example, a script file named 'math.sh' is concatenated, and the output piped into the word count command 'wc -l' which, with the inclusion of the -l flag, counts the number of lines in the file. Thus, the number of lines in the 'math.sh' script is stored into the variable 'math_lines'.
+
+### Bash variables
+
+Bash comes with its own variables that are automatically assigned without any input from the programmer.
+
+| Variable   | Stores                                         |
+| ---------- | ---------------------------------------------- |
+| $@         | An array of all arguments passed to a script   |
+| $1, $2 ... | First, second, nth argument passed to a script |
+| $#         | Total number of arguments passed to a script   |
+| $?         | exit status of the last run program            |
+
+## User input
+
+Finally, a useful command to know is the **read** command, which prompts the user to type in a string. The string provided by the user when prompted is stored in the variable given to the read command.
+
+```
+read <variable name>
+```
