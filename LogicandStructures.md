@@ -64,9 +64,7 @@ Arrays are created with parentheses (), where the elements are separated by a sa
 
 ```
 my_arr=(1 2 3 4)
-
 echo ${my_arr[0]}
-
 -----------------
 
 1
@@ -87,9 +85,7 @@ To print **a range of elements of an array**, see following example.
 
 ```
 your_arr=({1..10})
-
 echo ${your_arr[*]:3:10}
-
 ----------------
 4 5 6 7 8 9 10
 ```
@@ -102,9 +98,7 @@ To print **length of array**, include a pound symbol '#' as shown below:
 
 ```
 echo ${#your_arr[*]}
-
 ---------------
-
 10
 ```
 
@@ -116,12 +110,9 @@ Use curly braces {..} to create a string sequence:
 echo {0..9}
 echo {a..e}
 echo {A..Z}
-
 ----------------
 0 1 2 3 4 5 6 7 8 9
-
 a b c d e
-
 A B C D E
 ```
 
@@ -140,4 +131,66 @@ echo {0..3}{a..c}
 -----------------
 0a 1a 2a 3a 0b 1b 2b 3b 0c 1c 2c 3c
 
+```
+
+The **eval** command lets one use variables to define a sequence:
+
+```
+start=4
+end=9
+eval echo {$start..$end}
+```
+
+One may attach sequences together with a comma between braces:
+
+```
+echo {{1..3},{a..c}}
+--------------------
+1 2 3 a b c
+```
+
+# Loops
+
+## For loops
+
+General structure of a for loop:
+
+```
+for i in {1..3}
+do
+  echo "i is $i"
+done
+---------------
+i is 1
+i is 2
+i is 3
+```
+
+### With explicit list
+
+```
+for i in list1.txt list2.txt list3.txt
+do
+  place commands here
+done
+```
+
+### With arrays
+
+```
+arr=(curly larry moe)
+for stooge in ${arr[*]}
+do
+  place commands here
+done
+
+```
+
+### With command substitution
+
+```
+for something in $(<place commands here>)
+do
+  place commands here
+done
 ```
