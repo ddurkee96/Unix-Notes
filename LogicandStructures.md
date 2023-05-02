@@ -57,3 +57,87 @@ The regex logical operator is used, for example, in the following way to identif
 ```
 
 Adding an exclamation mark '!' before a conditional expression (still inside of the double brackets) will invert the value pf the conditional expression.
+
+# Arrays
+
+Arrays are created with parentheses (), where the elements are separated by a sapce. In UNIX, the first element in an array starts from 0 - the 'zeroth' element of the array. To call an element in an array, use curly braces. See example code below.
+
+```
+my_arr=(1 2 3 4)
+
+echo ${my_arr[0]}
+
+-----------------
+
+1
+```
+
+To print **all elements in an array**, use the asterik symbol \* as shown below.
+
+```
+echo ${my_arr[*]}
+
+-----------------
+
+1 2 3 4
+
+```
+
+To print **a range of elements of an array**, see following example.
+
+```
+your_arr=({1..10})
+
+echo ${your_arr[*]:3:10}
+
+----------------
+4 5 6 7 8 9 10
+```
+
+In the first line of code above, I used **brace expansion** to create a sequence of numbers from 1 to 10, and store these numbers as elements in an array. More description on using brace expansion is given in subsection below.
+
+Next, I can specify the range of elements in the array that I'd like to echo. In this case, I specified to print the values of the elements starting at element 3 in the array, and ending at and including element 10 in the array.
+
+To print **length of array**, include a pound symbol '#' as shown below:
+
+```
+echo ${#your_arr[*]}
+
+---------------
+
+10
+```
+
+## Brace Expansion
+
+Use curly braces {..} to create a string sequence:
+
+```
+echo {0..9}
+echo {a..e}
+echo {A..Z}
+
+----------------
+0 1 2 3 4 5 6 7 8 9
+
+a b c d e
+
+A B C D E
+```
+
+One can put strings on either side to paste on to every 'element' in the sequence:
+
+```
+echo a{0..3}
+------------
+a0 a1 a2 a3
+```
+
+or combine multiple sequences together:
+
+```
+echo {0..3}{a..c}
+-----------------
+0a 1a 2a 3a 0b 1b 2b 3b 0c 1c 2c 3c
+
+```
