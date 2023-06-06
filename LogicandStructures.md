@@ -194,3 +194,16 @@ do
   place commands here
 done
 ```
+
+## While Loops
+
+While loop syntax is as follows:
+
+```
+count = 3
+
+while [[ count -gt 0]]
+do
+  ....
+done
+```
