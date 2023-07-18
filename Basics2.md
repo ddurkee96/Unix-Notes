@@ -78,3 +78,47 @@ arg1: a string, e.g. 'u+x', composed of three parts together in the following wa
 - g : group
 - o : everyone else
 - a : all
+
+2. add, remove, or set permission
+
+- (+) : add
+- (-) : remove
+- (=) : set
+
+3. specify what permission to change
+
+- r : read
+- w : write/edit
+- x : execute
+
+### Shebang
+
+The 'shebang' begins with "#!" followed by the path to a program which executes the code in file.
+For example, one will typically see the following shebang at the beginning of a Bash script in order to use Bash:
+
+```
+#!/usr/bin/env
+```
+
+### Environmental Variables
+
+Environmental variables are variables that Bash creates, in which data about your current computing environment is stored. Thsese variables use all capital letters
+
+For example:
+
+```
+echo $HOME
+echo $PWD
+```
+
+#### $PATH
+
+The PATH variable contains a sequence of paths separated by colons. When the shell starts, it searches these paths for executable files, and
+makes these executable commands available in our shell. We can make our scripts available by adding a directory to the PATH variable. Bash scripts
+that are in the directory that are executable can be used as commands.
+
+To modify an environmental variable, use the **export** keyword:
+
+```
+export PATH=~/
+```
