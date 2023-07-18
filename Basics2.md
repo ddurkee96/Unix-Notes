@@ -49,3 +49,32 @@ ntmy Balthazar
 ## Nice to meet you Dylan
 ## Nice to meet you Balthazar
 ```
+
+### Permissions in Unix
+
+Associated with each file is a string of characters that define the read, write, and execute permissions for that file. The syntax looks like the following:
+
+```
+-rw-rw-r
+```
+
+We see that there are three segments in the above format. Each segment prescribes permissions for:
+
+1. the owner of the file
+2. the group that the file belongs to
+3. everyone besides the owner and the group
+
+The **chmod** command allows one to modify the permissions on a file:
+
+```
+chmod <arg1> <arg2>
+```
+
+arg1: a string, e.g. 'u+x', composed of three parts together in the following way:
+
+1. specify set of users
+
+- u : owner
+- g : group
+- o : everyone else
+- a : all
