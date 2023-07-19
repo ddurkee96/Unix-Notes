@@ -32,9 +32,16 @@ To create a local Git repository,
 1. Create a directory and cd into that directory.
 2. run the command 'git init' on the command line to start tracking files inside that directory with Git.
 
+### List of Git commands
+
 | Command                       | Description                                                                                                                                                                                  |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | git status                    | Gives information about the status of the Git repository (commits, files to be committed, etc.)                                                                                              |
 | git add <file1> <file2> ...   | Lets Git know that you want to track these files. The file is now 'staged'.                                                                                                                  |
 | git rm --cached <file>        | Unstage (un-track) file                                                                                                                                                                      |
 | git commit -m "short message" | Commit creation of files that have been added with "git add". Makes a milestone to indicate changes to repo. Must type brief message with notes about changes to the file since last commit. |
+| git add -A                    | Stages all files in the directory                                                                                                                                                            |
+| git help <cmd>                | View manual for a command                                                                                                                                                                    |
+| git log                       | View list of Git commands                                                                                                                                                                    |
+| git diff <file>               | Show differences between unstaged changes to a file compared to the last commit                                                                                                              |
+| git checkout <file>           | Remove all changes made to a file since the last commit                                                                                                                                      |
