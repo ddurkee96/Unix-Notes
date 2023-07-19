@@ -1,4 +1,4 @@
-# Git and Github: the basics
+# Git and Github basics
 
 Here, we describe Git and Github and go over the basic commands and utilities that they allow.
 
@@ -9,6 +9,8 @@ Here, we describe Git and Github and go over the basic commands and utilities th
 Git and Github are powerful tools for tracking changes to code files in collaborative projects. For
 example, each user in a collaboration can create their own branches of code files, and merge file
 changes to a main once all collaborators agree on a change.
+
+## Git
 
 ```
 git -- version
@@ -29,3 +31,10 @@ To create a local Git repository,
 
 1. Create a directory and cd into that directory.
 2. run the command 'git init' on the command line to start tracking files inside that directory with Git.
+
+| Command                       | Description                                                                                                                                                                                  |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| git status                    | Gives information about the status of the Git repository (commits, files to be committed, etc.)                                                                                              |
+| git add <file1> <file2> ...   | Lets Git know that you want to track these files. The file is now 'staged'.                                                                                                                  |
+| git rm --cached <file>        | Unstage (un-track) file                                                                                                                                                                      |
+| git commit -m "short message" | Commit creation of files that have been added with "git add". Makes a milestone to indicate changes to repo. Must type brief message with notes about changes to the file since last commit. |
